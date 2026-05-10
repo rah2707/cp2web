@@ -1,9 +1,9 @@
 const listaProdutos = [
- {nome: "HOMEM DE FERRO", descricao: "Boneco ilustrativo do superheroi Homem de ferro",preco: 4500,imagem: ""},
- {nome: "SUPERMAN",descricao: "Boneco ilustrativo do superheroi Superman",preco: 2200,imagem: ""},
- {nome: "BATMAN",descricao: "Boneco ilustrativo do superheroi Batman",preco: 350,imagem: ""},
- {nome: "FLASH",descricao: "Boneco ilustrativo do superheroi Flash",preco: 180,imagem: ""},
- {nome: "HULK",descricao: "Boneco ilustrativo do superheroi Hulk",preco: 420,imagem: ""}
+ {nome: "HOMEM DE FERRO", descricao: "Boneco ilustrativo do superheroi Homem de ferro",preco: 250,imagem: ""},
+ {nome: "SUPERMAN",descricao: "Boneco ilustrativo do superheroi Superman",preco: 200,imagem: ""},
+ {nome: "BATMAN",descricao: "Boneco ilustrativo do superheroi Batman",preco: 300,imagem: ""},
+ {nome: "FLASH",descricao: "Boneco ilustrativo do superheroi Flash",preco: 150,imagem: ""},
+ {nome: "HULK",descricao: "Boneco ilustrativo do superheroi Hulk",preco: 200,imagem: ""}
 ];
 
 const container = document.getElementById("produtos");
