@@ -35,7 +35,7 @@ h1 {
   margin: 10px 0;
 }
 
-.card button {
+.add {
   background-color: #007bff;
   color: white;
   border-radius: 20px;
@@ -44,12 +44,29 @@ h1 {
   cursor: pointer;
 }
 
-.card button:hover {
+.add:hover {
   background-color: #0056b3;
+}
+
+.rm {
+  background-color: #dc032f;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.rm:hover {
+  background-color: #a50223;
 }
 
 .preco {
   color: green;
   font-size: 20px;
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
