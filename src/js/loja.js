@@ -1,41 +1,39 @@
-const carrinho = [
- {nome: "HOMEM DE FERRO", preco: 250,imagem: ""},
- {nome: "SUPERMAN",preco: 200,imagem: ""},
- {nome: "BATMAN",preco: 300,imagem: ""},
- {nome: "FLASH",preco: 150,imagem: ""},
- {nome: "HULK",preco: 200,imagem: ""}
-];
 const listaItens = document.getElementById("listaItens");
 const valorTotal = document.getElementById("valorTotal");
 const btnDesconto = document.getElementById("btnDesconto");
 
-carrinho.forEach(item => {
-    const div = document.createElement("div");
-    div.classList.add("item");
-    div.innerHTML = `
-        <span>${item.nome}</span>
-        <span>
-          ${item.preco.toLocaleString("pt-BR", {
-            style: "currency", currency: "BRL"
-          })}
-        </span>
-    `;
-    listaItens.appendChild(div);
-});
-let total = carrinho.reduce((soma, item) => {
-    return soma + item.preco;
-}, 0);
+function desconto() {
+  const input = document.getElementById("code");
 
-function formatarMoeda(valor){
-    return valor.toLocaleString("pt-BR", {
-      style: "currency", currency: "BRL"
-    });
-}
-valorTotal.textContent = formatarMoeda(total);
-btnDesconto.addEventListener("click", () => {
-    total = total - (total * 0.10);
-    valorTotal.textContent = formatarMoeda(total);
+  const { valido, valor } = codigoValido(input.value);
+
+  if (valido) {
+    const novoTotal = total * (1 - valor);
+
+    valorTotal.textContent = formatarMoeda(novoTotal);
+
+    input.style.display = "none";
     btnDesconto.disabled = true;
     btnDesconto.textContent = "Desconto Aplicado";
     btnDesconto.style.background = "green";
+  } else {
+    alert("Código inválido");
+    input.value = "";
+    input.focus();
+  }
+}
+
+carrinho.forEach((item) => {
+  const div = document.createElement("div");
+  div.classList.add("item");
+
+  div.innerHTML = `
+    <span>${item.nome}</span>
+    <span>${formatarMoeda(item.preco)}</span>`;
+
+  listaItens.appendChild(div);
 });
+
+const total = carrinho.reduce((soma, item) => soma + item.preco, 0);
+
+valorTotal.textContent = formatarMoeda(total);

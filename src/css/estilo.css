@@ -1,36 +1,101 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
-    margin:0;
-    padding:20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
 }
-h1{
-    text-align:center;
-    margin-bottom:30px;
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
 }
-.container{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
 }
-.card{
-    background:white;
-    border-radius:10px;
-    padding:15px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.2);
-    text-align:center;
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:8px;
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
 }
-.card h3{
-    margin:10px 0;
+
+.card h3 {
+  margin: 10px 0;
 }
-.preco{
-    color:green;
-    font-size:20px;
-    font-weight:bold;
+
+.add {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #0056b3;
+}
+
+.rm {
+  background-color: #dc032f;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.rm:hover {
+  background-color: #a50223;
+}
+
+.preco {
+  color: green;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.carrinho {
+  display: flex;
+  position: sticky;
+  bottom: 20px;
+  left: 95vw;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.carrinho:hover {
+  background-color: #0056b3;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
