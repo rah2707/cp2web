@@ -6,6 +6,7 @@
     <title>Carrinho da loja</title>
     <link rel="stylesheet" href="../css/loja.css" />
     <script src="../js/common.js"></script>
+    <script src="../js/codigosDesconto.js"></script>
     <script src="../js/carrinho.js"></script>
     <script src="../js/loja.js" defer></script>
   </head>
@@ -17,7 +18,8 @@
         <p>Total da Compra:</p>
         <span id="valorTotal">R$ 0,00</span>
       </h2>
-      <button id="btnDesconto">Aplicar Desconto de 10%</button>
+      <input type="text" id="code" autocomplete="off" placeholder="Código">
+      <button id="btnDesconto" onclick="desconto()">Aplicar Desconto</button>
     </div>
   </body>
 </html>
