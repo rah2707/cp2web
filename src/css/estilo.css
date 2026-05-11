@@ -12,7 +12,7 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: auto auto auto auto;
   gap: 20px;
 }
 
@@ -69,4 +69,33 @@ h1 {
 
 .hidden {
   display: none;
+}
+
+.carrinho {
+  display: flex;
+  position: sticky;
+  bottom: 20px;
+  left: 95vw;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.carrinho:hover {
+  background-color: #0056b3;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }

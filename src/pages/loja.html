@@ -11,15 +11,20 @@
     <script src="../js/loja.js" defer></script>
   </head>
   <body>
-    <h1>Carrinho de Compras</h1>
-    <div class="carrinho">
-      <div id="listaItens"></div>
-      <h2 class="total">
-        <p>Total da Compra:</p>
-        <span id="valorTotal">R$ 0,00</span>
-      </h2>
-      <input type="text" id="code" autocomplete="off" placeholder="Código">
-      <button id="btnDesconto" onclick="desconto()">Aplicar Desconto</button>
-    </div>
+    <header>
+      <a href="../../index.html" class="return">voltar</a>
+    </header>
+    <main>
+      <h1>Carrinho de Compras</h1>
+      <div class="carrinho">
+        <div id="listaItens"></div>
+        <h2 class="total">
+          <p>Total da Compra:</p>
+          <span id="valorTotal">R$ 0,00</span>
+        </h2>
+        <input type="text" id="code" autocomplete="off" placeholder="Código" />
+        <button id="btnDesconto" onclick="desconto()">Aplicar Desconto</button>
+      </div>
+    </main>
   </body>
 </html>
